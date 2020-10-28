@@ -7,6 +7,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.js'
   },
+  devServer: {
+    contentBase: "./dist",
+  },
   module: {
     rules: [{
       test: /\.scss$/,
@@ -19,7 +22,6 @@ module.exports = {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
-              // options...
             }
           }
         ]
