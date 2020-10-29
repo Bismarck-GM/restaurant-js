@@ -5,13 +5,15 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.js'
+    filename: 'js/bundle.js',
+    // publicPath: '../'
   },
   devServer: {
     contentBase: "./dist",
   },
   module: {
-    rules: [{
+    rules: [
+      {
       test: /\.scss$/,
       use: [
           MiniCssExtractPlugin.loader,
@@ -25,7 +27,16 @@ module.exports = {
             }
           }
         ]
-    }]
+      },
+      {
+        test: /\.(png|svg|jpg|gif|jpeg)$/,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+          publicPath: '../images',
+        },
+      },
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
