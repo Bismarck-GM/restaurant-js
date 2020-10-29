@@ -35,7 +35,7 @@ const PAGELOAD = (() => {
   content.appendChild(tabContent);
   
   let footer = document.createElement('footer');
-  footer.classList.add('footer', 'is-relative', 'mt-5', 'is-white');
+  footer.classList.add('footer', 'is-relative', 'mt-5');
   footer.innerHTML = `
   <div class="git-links">
   <div class="firm">
