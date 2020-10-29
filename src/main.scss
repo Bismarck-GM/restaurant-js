@@ -17,6 +17,34 @@ body {
   padding: 8rem 1.5rem;
 }
 
-.navbar-item.activated {
+.is-active {
   background-color: rgba(237,226,138, 0.8);
+}
+
+.git-links {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 15px;
+  padding-right: 15px;
+  filter: invert(80%);
+  align-items: center;
+  justify-content: center;
+}
+
+.git-links p {
+  padding-right: 15px;
+  font-size: 12px;
+}
+
+.git-links img {
+  height: 45px;
+}
+
+.firm {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
 }

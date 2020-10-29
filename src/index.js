@@ -1,4 +1,5 @@
+import {PAGELOAD, mobileTitleContainer, TABCONTENTS} from './modules/template'
+import {LOADHOME} from './modules/home'
 import './main.scss';
 
-console.log('Hola loco.');
-console.log('Tu vieja loca.');
+LOADHOME();
