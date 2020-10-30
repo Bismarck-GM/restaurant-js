@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+@import "~bulma/bulma";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.hero.is-dark.is-bold {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.01) 0%, rgba(217, 217, 217, 0.8) 100%), url('./mainimage23.jpg');
+  background-position: 0% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero.is-medium .hero-body {
+  padding: 8rem 1.5rem;
+}
+
+.is-active {
+  background-color: rgba(237, 226, 138, 0.8);
+}
+
+.footer {
+  background-color: inherit;
+}
+
+.git-links {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 15px;
+  padding-right: 15px;
+  filter: invert(80%);
+  align-items: center;
+  justify-content: center;
+}
+
+.git-links p {
+  padding-right: 15px;
+  font-size: 12px;
+}
+
+.git-links img {
+  height: 45px;
+}
+
+.firm {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  cursor: pointer;
+}
