@@ -46,16 +46,16 @@ const PAGELOAD = (() => {
 
 
   return {
-      mobileTitleContainer,
-      tabContent
+      tabContent,
+      tabs
   }
 })();
 
-const mobileTitleContainer = PAGELOAD.mobileTitleContainer;
+const TABS = PAGELOAD.tabs;
 const TABCONTENTS = PAGELOAD.tabContent;
 
 export{
   PAGELOAD,
-  mobileTitleContainer,
+  TABS,
   TABCONTENTS
 }

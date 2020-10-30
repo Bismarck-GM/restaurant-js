@@ -1,113 +1,127 @@
 import { TABCONTENTS } from "./template";
 import { HOTELS } from "./hotels";
-import { mainColumns, left, right, innerLeftColumns, innerRightColumns, innerLeftColumn, innerRightColumn } from "./card-grid"
 
 const LOADSLEEP = (() => {
+  const half = Math.ceil(HOTELS.length / 2);
+  const FIRSTHALF = HOTELS.splice(0, half)
+  const SECONDHALF = HOTELS.splice(-half)
 
-    const half = Math.ceil(HOTELS.length / 2);
-    const FIRSTHALF = HOTELS.splice(0, half)
-    const SECONDHALF = HOTELS.splice(-half)
+  let mainColumns = document.createElement('div');
+  mainColumns.classList.add('columns');
+  let left = document.createElement('div');
+  left.classList.add('column', 'is-half', 'p-3');
+  let right = document.createElement('div');
+  right.classList.add('column', 'is-half', 'p-3');
+  let innerLeftColumns = document.createElement('div');
+  innerLeftColumns.classList.add('columns', 'is-centered');
+  let innerRightColumns = document.createElement('div');
+  innerRightColumns.classList.add('columns', 'is-centered');
+  let innerLeftColumn = document.createElement('div');
+  innerLeftColumn.classList.add('column', 'is-three-quarters', 'p-3');
+  let innerRightColumn = document.createElement('div');
+  innerRightColumn.classList.add('column', 'is-three-quarters', 'p-3');
 
-    FIRSTHALF.forEach(dish => {
-        let card = document.createElement('div');
-        card.classList.add('card', 'mt-3', 'mb-3', 'p-2');
 
-        let cardImage = document.createElement('div');
-        cardImage.classList.add('card-image');
+  FIRSTHALF.forEach(dish => {
+      let card = document.createElement('div');
+      card.classList.add('card', 'mt-3', 'mb-3', 'p-2');
 
-        let imageContainer = document.createElement('figure');
-        imageContainer.classList.add('image', 'is-1by1');
+      let cardImage = document.createElement('div');
+      cardImage.classList.add('card-image');
 
-        let image = document.createElement('img');
-        image.setAttribute('src', dish.image);
-        
-        imageContainer.appendChild(image);
-        cardImage.appendChild(imageContainer);
+      let imageContainer = document.createElement('figure');
+      imageContainer.classList.add('image', 'is-1by1');
 
-        let cardContent = document.createElement('div');
-        cardContent.classList.add('card-content');
+      let image = document.createElement('img');
+      image.setAttribute('src', dish.image);
+      
+      imageContainer.appendChild(image);
+      cardImage.appendChild(imageContainer);
 
-        let mediaMain = document.createElement('div');
-        mediaMain.classList.add('media');
+      let cardContent = document.createElement('div');
+      cardContent.classList.add('card-content');
 
-        let mediaContent = document.createElement('div');
-        mediaContent.classList.add('media-content');
+      let mediaMain = document.createElement('div');
+      mediaMain.classList.add('media');
 
-        let mediaTitle = document.createElement('p');
-        mediaTitle.classList.add('title', 'is-4');
-        mediaTitle.textContent = dish.title;
+      let mediaContent = document.createElement('div');
+      mediaContent.classList.add('media-content');
 
-        mediaContent.appendChild(mediaTitle);
-        mediaMain.appendChild(mediaContent);
+      let mediaTitle = document.createElement('p');
+      mediaTitle.classList.add('title', 'is-4');
+      mediaTitle.textContent = dish.title;
 
-        let content = document.createElement('div');
-        content.classList.add('content');
-        content.innerText = dish.body;
+      mediaContent.appendChild(mediaTitle);
+      mediaMain.appendChild(mediaContent);
 
-        cardContent.appendChild(mediaMain);
-        cardContent.appendChild(content);
+      let content = document.createElement('div');
+      content.classList.add('content');
+      content.innerText = dish.body;
 
-        card.appendChild(cardImage);
-        card.appendChild(cardContent);
+      cardContent.appendChild(mediaMain);
+      cardContent.appendChild(content);
 
-        innerLeftColumn.appendChild(card);
-    });
+      card.appendChild(cardImage);
+      card.appendChild(cardContent);
 
-    SECONDHALF.forEach(dish => {
-        let card = document.createElement('div');
-        card.classList.add('card', 'mt-3', 'mb-3', 'p-2');
+      innerLeftColumn.appendChild(card);
+  });
 
-        let cardImage = document.createElement('div');
-        cardImage.classList.add('card-image');
+  SECONDHALF.forEach(dish => {
+      let card = document.createElement('div');
+      card.classList.add('card', 'mt-3', 'mb-3', 'p-2');
 
-        let imageContainer = document.createElement('figure');
-        imageContainer.classList.add('image', 'is-1by1');
+      let cardImage = document.createElement('div');
+      cardImage.classList.add('card-image');
 
-        let image = document.createElement('img');
-        image.setAttribute('src', dish.image);
-        
-        imageContainer.appendChild(image);
-        cardImage.appendChild(imageContainer);
+      let imageContainer = document.createElement('figure');
+      imageContainer.classList.add('image', 'is-1by1');
 
-        let cardContent = document.createElement('div');
-        cardContent.classList.add('card-content');
+      let image = document.createElement('img');
+      image.setAttribute('src', dish.image);
+      
+      imageContainer.appendChild(image);
+      cardImage.appendChild(imageContainer);
 
-        let media = document.createElement('div');
-        media.classList.add('media');
+      let cardContent = document.createElement('div');
+      cardContent.classList.add('card-content');
 
-        let mediaContent = document.createElement('div');
-        mediaContent.classList.add('media-content');
+      let media = document.createElement('div');
+      media.classList.add('media');
 
-        let mediaTitle = document.createElement('p');
-        mediaTitle.classList.add('title', 'is-4');
-        mediaTitle.textContent = dish.title;
+      let mediaContent = document.createElement('div');
+      mediaContent.classList.add('media-content');
 
-        mediaContent.appendChild(mediaTitle);
-        media.appendChild(mediaContent);
+      let mediaTitle = document.createElement('p');
+      mediaTitle.classList.add('title', 'is-4');
+      mediaTitle.textContent = dish.title;
 
-        let content = document.createElement('div');
-        content.classList.add('content');
-        content.innerText = dish.body;
+      mediaContent.appendChild(mediaTitle);
+      media.appendChild(mediaContent);
 
-        cardContent.appendChild(media);
-        cardContent.appendChild(content);
+      let content = document.createElement('div');
+      content.classList.add('content');
+      content.innerText = dish.body;
 
-        card.appendChild(cardImage);
-        card.appendChild(cardContent);
+      cardContent.appendChild(media);
+      cardContent.appendChild(content);
 
-        innerRightColumn.appendChild(card);
-    });
+      card.appendChild(cardImage);
+      card.appendChild(cardContent);
 
-    innerLeftColumns.appendChild(innerLeftColumn);
-    innerRightColumns.appendChild(innerRightColumn);
+      innerRightColumn.appendChild(card);
+  });
 
-    left.appendChild(innerLeftColumns);
-    right.appendChild(innerRightColumns);
+  innerLeftColumns.appendChild(innerLeftColumn);
+  innerRightColumns.appendChild(innerRightColumn);
 
-    mainColumns.appendChild(left);
-    mainColumns.appendChild(right);
+  left.appendChild(innerLeftColumns);
+  right.appendChild(innerRightColumns);
 
-    TABCONTENTS.appendChild(mainColumns);
+  mainColumns.appendChild(left);
+  mainColumns.appendChild(right);
+
+  TABCONTENTS.appendChild(mainColumns);
 });
 
 export{LOADSLEEP};
