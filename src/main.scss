@@ -1,4 +1,5 @@
 @charset "utf-8";
+
 @import "~bulma/bulma";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
 
@@ -7,7 +8,7 @@ body {
 }
 
 .hero.is-dark.is-bold {
-  background-image: linear-gradient(90deg, rgba(255,255,255,0.01) 0%, rgba(217,217,217,0.8) 100%), url('./mainimage23.jpg');
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.01) 0%, rgba(217, 217, 217, 0.8) 100%), url('./mainimage23.jpg');
   background-position: 0% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,7 +19,7 @@ body {
 }
 
 .is-active {
-  background-color: rgba(237,226,138, 0.8);
+  background-color: rgba(237, 226, 138, 0.8);
 }
 
 .footer {
@@ -51,4 +52,10 @@ body {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  cursor: pointer;
 }

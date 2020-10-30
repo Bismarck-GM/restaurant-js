@@ -35,6 +35,11 @@ module.exports = {
           publicPath: '../images',
         },
       },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
     ],
   },
   plugins: [
