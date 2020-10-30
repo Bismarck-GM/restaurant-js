@@ -1,6 +1,5 @@
 const PAGELOAD = (() => {
   const content = document.querySelector('#content');
-
   const mobileTitleContainer = document.createElement('div');
   mobileTitleContainer.classList.add('container', 'is-hidden-fullhd');
   const mobileTitle = document.createElement('h1');
@@ -12,7 +11,6 @@ const PAGELOAD = (() => {
   mobileSubtitle.innerText = "We serve 1's and 0's";
   mobileTitleContainer.appendChild(mobileSubtitle);
   content.appendChild(mobileTitleContainer);
-
   const tabs = document.createElement('div');
   tabs.classList.add('tabs', 'is-centered', 'is-boxed');
   const ul = document.createElement('ul');
@@ -44,15 +42,13 @@ const PAGELOAD = (() => {
   </div>`;
   content.appendChild(footer);
 
-
   return {
     tabContent,
     tabs,
   };
 })();
 
-const TABS = PAGELOAD.tabs;
-const TABCONTENTS = PAGELOAD.tabContent;
+const { tabs: TABS, tabContent: TABCONTENTS } = PAGELOAD;
 
 export {
   PAGELOAD,
