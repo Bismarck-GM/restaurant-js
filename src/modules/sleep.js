@@ -1,5 +1,6 @@
 import { TABCONTENTS } from "./template";
 import { HOTELS } from "./hotels";
+import { mainColumns, left, right, innerLeftColumns, innerRightColumns, innerLeftColumn, innerRightColumn } from "./card-grid"
 
 const LOADSLEEP = (() => {
 
@@ -7,24 +8,9 @@ const LOADSLEEP = (() => {
     const FIRSTHALF = HOTELS.splice(0, half)
     const SECONDHALF = HOTELS.splice(-half)
 
-    let mainColumns = document.createElement('div');
-    mainColumns.classList.add('columns');
-    let left = document.createElement('div');
-    left.classList.add('column', 'is-half', 'p-3');
-    let right = document.createElement('div');
-    right.classList.add('column', 'is-half', 'p-3');
-    let innerLeftColumns = document.createElement('div');
-    innerLeftColumns.classList.add('columns');
-    let innerRightColumns = document.createElement('div');
-    innerRightColumns.classList.add('columns');
-    let innerLeftColumn = document.createElement('div');
-    innerLeftColumn.classList.add('column', 'is-three-quarters', 'p-3');
-    let innerRightColumn = document.createElement('div');
-    innerRightColumn.classList.add('column', 'is-three-quarters', 'p-3');
-
     FIRSTHALF.forEach(dish => {
         let card = document.createElement('div');
-        card.classList.add('card', 'mt-3', 'mb-3');
+        card.classList.add('card', 'mt-3', 'mb-3', 'p-2');
 
         let cardImage = document.createElement('div');
         cardImage.classList.add('card-image');
@@ -69,7 +55,7 @@ const LOADSLEEP = (() => {
 
     SECONDHALF.forEach(dish => {
         let card = document.createElement('div');
-        card.classList.add('card', 'mt-3', 'mb-3');
+        card.classList.add('card', 'mt-3', 'mb-3', 'p-2');
 
         let cardImage = document.createElement('div');
         cardImage.classList.add('card-image');
