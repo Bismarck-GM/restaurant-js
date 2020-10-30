@@ -2,10 +2,10 @@ import { TABCONTENTS } from "./template";
 import { DISHES } from "./dishes";
 
 const LOADEAT = (() => {
-	TABCONTENTS.innerHTML = '';
-	const half = Math.ceil(DISHES.length / 2);
-	const FIRSTHALF = DISHES.splice(0, half)
-	const SECONDHALF = DISHES.splice(-half)
+	const FOOD = [...DISHES];
+	const half = Math.ceil(FOOD.length / 2);
+	const FIRSTHALF = FOOD.splice(0, half);
+	const SECONDHALF = FOOD.splice(-half);
 
 	let mainColumns = document.createElement('div');
 	mainColumns.classList.add('columns');
@@ -21,7 +21,6 @@ const LOADEAT = (() => {
 	innerLeftColumn.classList.add('column', 'is-three-quarters', 'p-3');
 	let innerRightColumn = document.createElement('div');
 	innerRightColumn.classList.add('column', 'is-three-quarters', 'p-3');
-
 
 	FIRSTHALF.forEach(dish => {
 		let card = document.createElement('div');

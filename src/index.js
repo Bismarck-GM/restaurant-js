@@ -8,23 +8,31 @@ import './main.scss';
 LOADHOME();
 
 
-let navLinks = document.querySelectorAll('.tab-item');
+let tabItems = document.querySelectorAll('.tab-item');
 
 TABS.addEventListener('click', (e) =>{
   TABCONTENTS.innerHTML = '';
   if(e.target.innerText === 'Home'){
-    console.log('load home');
     LOADHOME();
   }
   else if(e.target.innerText === 'Eat ( );'){
-    console.log('load eat');
     LOADEAT();
   }
   else if(e.target.innerText === 'Sleep ( );'){
-    console.log('load SLEEP');
     LOADSLEEP();
   }
+  else if(e.target.innerText === 'Code ( );'){
+    LOADCODE();
+  }
+  else if(e.target.innerText == 'Repeat ( );'){
+    location.reload();
+  }
 
+  tabItems.forEach(tab => {
+    if(tab.classList.contains('is-active')){
+        tab.classList.remove('is-active')
+    }
+  e.target.parentNode.classList.add('is-active');
 })
 
-console.log(navLinks);
+})

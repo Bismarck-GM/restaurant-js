@@ -8,7 +8,7 @@ const LOADHOME = (() => {
     let title = document.createElement('h1');
     title.textContent = "Everything the average programmer needs";
     let intro = document.createElement('p');
-    intro.textContent = "Welcome to Code Eats! Loop through our tabs to find what you're needed at this point... if not sure start from the next tab. Good luck in your journey programmer!"
+    intro.textContent = "Welcome to Code Eats! Loop through our tabs to find what you're needing at this point... if not sure start from the next tab. Good luck in your journey programmer!"
     left.appendChild(title, intro);
     left.appendChild(intro);
 

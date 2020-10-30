@@ -2,9 +2,10 @@ import { TABCONTENTS } from "./template";
 import { HOTELS } from "./hotels";
 
 const LOADSLEEP = (() => {
-  const half = Math.ceil(HOTELS.length / 2);
-  const FIRSTHALF = HOTELS.splice(0, half)
-  const SECONDHALF = HOTELS.splice(-half)
+  const ROOMS = [...HOTELS];
+  const half = Math.ceil(ROOMS.length / 2);
+  const FIRSTHALF = ROOMS.splice(0, half)
+  const SECONDHALF = ROOMS.splice(-half)
 
   let mainColumns = document.createElement('div');
   mainColumns.classList.add('columns');
@@ -20,7 +21,6 @@ const LOADSLEEP = (() => {
   innerLeftColumn.classList.add('column', 'is-three-quarters', 'p-3');
   let innerRightColumn = document.createElement('div');
   innerRightColumn.classList.add('column', 'is-three-quarters', 'p-3');
-
 
   FIRSTHALF.forEach(dish => {
       let card = document.createElement('div');
