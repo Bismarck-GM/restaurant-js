@@ -24,7 +24,7 @@ const DISHES = [{
   "body": "Keystone of nutritious food"
 }, {
   "image": "https://pbs.twimg.com/profile_images/890804383427903488/EKEHI5EE.jpg",
-  "title": "Sandwich",
+  "title": "The Sammich",
   "body": "2nd keystone"
 }, {
   "image": "https://cdn.telanganatoday.com/wp-content/uploads/2020/02/FRUITS-.jpg",

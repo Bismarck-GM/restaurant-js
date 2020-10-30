@@ -1,11 +1,11 @@
 import { TABCONTENTS } from "./template";
-import { DISHES } from "./dishes";
+import { HOTELS } from "./hotels";
 
-const LOADEAT = (() => {
+const LOADSLEEP = (() => {
 
-    const half = Math.ceil(DISHES.length / 2);
-    const FIRSTHALF = DISHES.splice(0, half)
-    const SECONDHALF = DISHES.splice(-half)
+    const half = Math.ceil(HOTELS.length / 2);
+    const FIRSTHALF = HOTELS.splice(0, half)
+    const SECONDHALF = HOTELS.splice(-half)
 
     let mainColumns = document.createElement('div');
     mainColumns.classList.add('columns');
@@ -124,4 +124,4 @@ const LOADEAT = (() => {
     TABCONTENTS.appendChild(mainColumns);
 });
 
-export{LOADEAT};
+export{LOADSLEEP};
