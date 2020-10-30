@@ -1,0 +1,39 @@
+const DISHES = [{
+  "image": "",
+  "title": "ASD",
+  "body": ""
+}, {
+  "image": "",
+  "title": "123",
+  "body": ""
+}, {
+  "image": "",
+  "title": "ASqweD",
+  "body": ""
+}, {
+  "image": "",
+  "title": "qwert",
+  "body": ""
+}, {
+  "image": "",
+  "title": "",
+  "body": ""
+}, {
+  "image": "",
+  "title": "",
+  "body": ""
+}, {
+  "image": "",
+  "title": "",
+  "body": ""
+}, {
+  "image": "",
+  "title": "",
+  "body": ""
+}, {
+  "image": "",
+  "title": "",
+  "body": ""
+}];
+
+export {DISHES};

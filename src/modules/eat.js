@@ -1,4 +1,9 @@
 import { TABCONTENTS } from "./template";
+import { DISHES } from "./dishes";
+
+DISHES.forEach(dish => {
+    console.log(dish.title);
+});
 
 const LOADEAT = (() => {
     let container = document.createElement('div');
