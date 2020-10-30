@@ -1,6 +1,6 @@
 # Restaurant-js (cOdE.Eats)
 
-> This basic webpage consist on learning how to work with ES6 modules, webpack and npm.
+> This basic webpage consists of learning how to work with ES6 modules, webpack, and Node.js.
 
 > The page content is about Programmers daily needs to survive :smile:
 
