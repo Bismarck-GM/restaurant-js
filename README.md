@@ -4,7 +4,7 @@
 
 > The page content is about Programmers daily needs to survive :smile:
 
-![screenshot](./Screenshot.gif)
+![screenshot](./screenshot.gif)
 
 ## Built With
 
@@ -30,13 +30,13 @@ $ git clone git@github.com:Bismarck-GM/restaurant-js.git
 ```
 
 ### Usage
-- Navigate to the folder created `$cd restaurant-js`
+- Navigate to the folder created `restaurant-js`
 - Open `index.html`
 
 ### For development
-- With the terminal: navigate to the folder created ```$cd restaurant-js```
-- Run: `$npm install` to install dependencies.
-- Run: `$npm run server`
+- With the terminal: navigate to the folder created `cd restaurant-js`
+- Run: `npm install` to install dependencies.
+- Run: `npm run server`
 - Go to `localhost:8080` in any browser.
 
 
