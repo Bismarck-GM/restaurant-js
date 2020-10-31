@@ -32,7 +32,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           outputPath: 'images',
-          publicPath: '../images',
+          publicPath: './images',
         },
       },
       {
@@ -44,7 +44,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/main.css',
+      filename: 'main.css',
     }),
   ],
 };
