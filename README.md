@@ -15,6 +15,10 @@
 - SCSS
 - HTML
 
+## Live Demo
+
+[Visit this link to view Live Demo](https://bismarck-gm.github.io/restaurant-js/)
+
 ## Getting Started
 
 ### Prerequisites
